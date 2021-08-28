@@ -1,9 +1,0 @@
-// babel配置
-{
-    "plugins": [
-        ["import", {
-        "libraryName": "zarm",
-        "style": true // or 'css'
-        }]
-    ]
-}
