@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './App.css'
+import './App.less'
 import 'zarm/dist/zarm.css'
 import zhCN from 'zarm/lib/config-provider/locale/zh_CN';
 import { ConfigProvider} from 'zarm'
