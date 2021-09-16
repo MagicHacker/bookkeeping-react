@@ -20,8 +20,8 @@ function App() {
             <Redirect from="/" to="/bill"></Redirect>
           </Switch>
         </ConfigProvider>
+        <TabBar/>
       </Router>
-      <TabBar/>
     </div>
   )
 }

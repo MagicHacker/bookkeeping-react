@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import './index.less'
 import { TabBar, Icon } from 'zarm'
 const TabIcon = Icon.createFromIconfont('//at.alicdn.com/t/font_2236655_w1mpqp7n1ni.js')
 
 const NavBar = (props) => {
+    const { history } = props
     const [visible, setVisible] = useState(true)
-    const [activeKey, setActiveKey] = useState('/statistics')
+    const [activeKey, setActiveKey] = useState('/bill')
     const changeTab = path => {
         setActiveKey(path)
+        history.push(path)
     }
     return (
         <>
@@ -26,4 +29,4 @@ NavBar.propTypes = {
     visible: PropTypes.bool
 }
 
-export default NavBar
+export default withRouter(NavBar)
