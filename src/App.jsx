@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <ConfigProvider locale={zhCN}>
+        <ConfigProvider locale={zhCN} primaryColor={'#007fff'}>
           <Switch>
             <Route path="/login" component={Login}></Route>
             <Route path="/bill" component={Bill}></Route>
