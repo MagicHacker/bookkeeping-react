@@ -15,8 +15,8 @@ const NavBar = (props) => {
     }
     return (
         <>
-            <TabBar activeKey={activeKey} visible={visible} style={{height: '40px'}} onChange={changeTab}>
-                <TabBar.Item title="账单" itemKey="/bill" icon={<TabIcon type="zhangdan" size="lg"></TabIcon>}></TabBar.Item>
+            <TabBar activeKey={activeKey} visible={visible} style={{height: '50px'}} onChange={changeTab}>
+                <TabBar.Item title="账单" itemKey="/bill" icon={<TabIcon type="zhangdan" size="md"></TabIcon>}></TabBar.Item>
                 <TabBar.Item title="统计" itemKey="/statistics" icon={<TabIcon type="tongji" size="md"></TabIcon>}></TabBar.Item>
                 <TabBar.Item title="我的" itemKey="/user" icon={<TabIcon type="wode" size="md"></TabIcon>}></TabBar.Item>
             </TabBar>
