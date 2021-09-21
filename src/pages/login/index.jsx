@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Cell, Icon, Input, Button} from 'zarm'
+import Captcha from 'react-captcha-code'
 import './index.less'
 
 const TabIcon = Icon.createFromIconfont('//at.alicdn.com/t/font_2236655_w1mpqp7n1ni.js')
 export default function Login() {
+    // 刷新验证码
+    const handleChange = () => {
+    }
     return (
         <div className="login-wrapper">
             <div className="login-header"></div>
@@ -17,6 +21,10 @@ export default function Login() {
                 </Cell>
                 <Cell style={{'backgroundColor': 'transparent'}} icon={<TabIcon type="mima" size="md"/>}>
                     <Input clearable type="password" placeholder="密码"/>
+                </Cell>
+                <Cell style={{'backgroundColor': 'transparent'}} icon={<TabIcon type="mima" size="md"/>}>
+                    <Input clearable type="text" placeholder="验证码"/>
+                    <Captcha charNum={4} onChange={handleChange}/>
                 </Cell>
             </div>
             <div className="login-btn">
