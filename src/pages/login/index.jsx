@@ -4,7 +4,7 @@ import Captcha from 'react-captcha-code'
 import './index.less'
 
 const TabIcon = Icon.createFromIconfont('//at.alicdn.com/t/font_2236655_w1mpqp7n1ni.js')
-export default function Login() {
+export default function Login(props) {
     const [tabType, setTabType] = useState('login')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -15,6 +15,8 @@ export default function Login() {
     }
     // 登录
     const login = () => {
+        const { history } = props
+        history.push('/bill')
         console.warn('登录', username, password)
     }
     const register = () => {
