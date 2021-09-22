@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Switch, Route, Redirect, useLocation} from 'react-router-dom'
 import './App.less'
 import 'zarm/dist/zarm.css'
 import zhCN from 'zarm/lib/config-provider/locale/zh_CN';
@@ -10,9 +10,13 @@ import Bill from '@/pages/bill'
 import Statistics from '@/pages/statistics'
 import Login from '@/pages/login'
 function App() {
+  const [showNav, setShowNav] = useState(false)
+  const { pathname} = useLocation()
+  useEffect(() => {
+    setShowNav(['/bill', '/statistics', '/user'].includes(location.pathname))
+  }, [pathname])
   return (
     <div className="App">
-      <Router>
         <ConfigProvider locale={zhCN} primaryColor={'#007fff'}>
           <Switch>
             <Route path="/login" component={Login}></Route>
@@ -22,8 +26,7 @@ function App() {
             <Redirect from="/" to="/login"></Redirect>
           </Switch>
         </ConfigProvider>
-        <TabBar/>
-      </Router>
+        <TabBar showNav={showNav}/>
     </div>
   )
 }
