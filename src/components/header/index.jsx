@@ -1,16 +1,10 @@
 /**
  * 头部组件
  */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Icon } from 'zarm';
 import './index.less';
-export default function Header() {
-  const [type, setType] = useState('全部类型');
-  const [time, setTime] = useState('');
-  useEffect(() => {
-    const date = new Date();
-    setTime(`${date.getFullYear()}-${date.getMonth() + 1}`);
-  }, []);
+export default function Header(props) {
   return (
     <div className="header-wrapper">
       <div className="header-data-wrapper">
@@ -25,12 +19,12 @@ export default function Header() {
         </span>
       </div>
       <div className="header-type-wrapper">
-        <div className="header-type-item">
-          <span>{type}</span>
+        <div className="header-type-item" onClick={props.togglePop}>
+          <span>{props.type}</span>
           <Icon className="header-type-icon" type="arrow-bottom" />
         </div>
-        <div className="header-type-item">
-          <span>{time}</span>
+        <div className="header-type-item" onClick={props.toggleDatePicker}>
+          <span>{props.date}</span>
           <Icon className="header-type-icon" type="arrow-bottom" />
         </div>
       </div>
