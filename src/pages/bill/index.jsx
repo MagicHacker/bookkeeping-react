@@ -1,10 +1,13 @@
-import React from 'react'
-import Header from '@/components/header'
-import './index.less'
+import React, { useState } from 'react';
+import Header from '@/components/header';
+import { Popup, DatePicker } from 'zarm';
+import './index.less';
 export default function Bill() {
-    return (
-        <div>
-            <Header />
-        </div>
-    )
+  const [dateVisible, setDateVisible] = useState(false);
+  return (
+    <div className="bill-wrapper">
+      <Header />
+      <DatePicker visible={dateVisible} mode="month" />
+    </div>
+  );
 }
