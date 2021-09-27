@@ -57,30 +57,30 @@ export default function Bill() {
             <Icon type="wrong" onClick={() => setPopVisible(false)} />
           </div>
           <div className="popup-content">
-            <div className="popup-item" onClick={selectAll}>
+            <div className={`popup-item ${type === '全部类型' ? 'active' : ''}`} onClick={selectAll}>
               全部类型
             </div>
             <div className="popup-text">支出</div>
             <div className="popup-expond" onClick={selectExpond}>
-              <div className="popup-item">餐饮</div>
-              <div className="popup-item">服饰</div>
-              <div className="popup-item">交通</div>
-              <div className="popup-item">日用</div>
-              <div className="popup-item">购物</div>
-              <div className="popup-item">学习</div>
-              <div className="popup-item">医疗</div>
-              <div className="popup-item">旅行</div>
-              <div className="popup-item">人情</div>
-              <div className="popup-item">其他</div>
+              <div className={`popup-item ${type === '餐饮' ? 'active' : ''}`}>餐饮</div>
+              <div className={`popup-item ${type === '服饰' ? 'active' : ''}`}>服饰</div>
+              <div className={`popup-item ${type === '交通' ? 'active' : ''}`}>交通</div>
+              <div className={`popup-item ${type === '日用' ? 'active' : ''}`}>日用</div>
+              <div className={`popup-item ${type === '购物' ? 'active' : ''}`}>购物</div>
+              <div className={`popup-item ${type === '学习' ? 'active' : ''}`}>学习</div>
+              <div className={`popup-item ${type === '医疗' ? 'active' : ''}`}>医疗</div>
+              <div className={`popup-item ${type === '旅行' ? 'active' : ''}`}>旅行</div>
+              <div className={`popup-item ${type === '人情' ? 'active' : ''}`}>人情</div>
+              <div className={`popup-item ${type === '其他' ? 'active' : ''}`}>其他</div>
             </div>
             <div className="popup-text">收入</div>
             <div className="popup-income" onClick={selectIncome}>
-              <div className="popup-item">工资</div>
-              <div className="popup-item">奖金</div>
-              <div className="popup-item">转账</div>
-              <div className="popup-item">理财</div>
-              <div className="popup-item">退款</div>
-              <div className="popup-item">其他</div>
+              <div className={`popup-item ${type === '工资' ? 'active' : ''}`}>工资</div>
+              <div className={`popup-item ${type === '奖金' ? 'active' : ''}`}>奖金</div>
+              <div className={`popup-item ${type === '转账' ? 'active' : ''}`}>转账</div>
+              <div className={`popup-item ${type === '理财' ? 'active' : ''}`}>理财</div>
+              <div className={`popup-item ${type === '退款' ? 'active' : ''}`}>退款</div>
+              <div className={`popup-item ${type === '其他' ? 'active' : ''}`}>其他</div>
             </div>
           </div>
         </div>
