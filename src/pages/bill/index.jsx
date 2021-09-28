@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '@/components/header';
-import { Popup, DatePicker, Icon } from 'zarm';
+import { Popup, DatePicker, Icon, Pull, Cell } from 'zarm';
 import './index.less';
 export default function Bill() {
   const [dateVisible, setDateVisible] = useState(false);
@@ -44,6 +44,35 @@ export default function Bill() {
   return (
     <div className="bill-wrapper">
       <Header toggleDatePicker={toggleDatePicker} togglePop={togglePop} date={date} type={type} />
+      <div className="bill-content">
+        <Pull>
+          <div className="bill-content-item">
+            <div className="bill-item-header">
+              <div className="bill-header-date">2021-09-28</div>
+              <div className="bill-header-money">
+                <span>
+                  <img src="http://s.yezgea02.com/1615953405599/zhi%402x.png" alt="支" />
+                  <span>11</span>
+                </span>
+                <span>
+                  <img src="http://s.yezgea02.com/1615953405599/shou%402x.png" alt="收" />
+                  <span>22</span>
+                </span>
+              </div>
+            </div>
+            <Cell
+              title={
+                <span>
+                  <Icon type="licai" />
+                  理财
+                </span>
+              }
+              description="+666"
+              help="2020"
+            />
+          </div>
+        </Pull>
+      </div>
       <DatePicker visible={dateVisible} mode="month" onOk={(value) => getDate(value)} onCancel={handleCancel} />
       <Popup
         visible={popVisible}
