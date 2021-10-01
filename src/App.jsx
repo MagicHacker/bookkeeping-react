@@ -10,6 +10,7 @@ import Bill from '@/pages/bill';
 import Statistics from '@/pages/statistics';
 import Login from '@/pages/login';
 import Custom from '@/components/custom';
+import PopupAdd from './components/popupAdd';
 function App() {
   const [showNav, setShowNav] = useState(false);
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
       </ConfigProvider>
       <TabBar showNav={showNav} />
       <Custom />
+      <PopupAdd />
     </div>
   );
 }
