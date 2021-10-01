@@ -4,11 +4,12 @@ import './App.less';
 import 'zarm/dist/zarm.css';
 import zhCN from 'zarm/lib/config-provider/locale/zh_CN';
 import { ConfigProvider } from 'zarm';
-import TabBar from './components/tab-bar';
+import TabBar from '@/components/tab-bar';
 import User from '@/pages/user';
 import Bill from '@/pages/bill';
 import Statistics from '@/pages/statistics';
 import Login from '@/pages/login';
+import Custom from '@/components/custom';
 function App() {
   const [showNav, setShowNav] = useState(false);
   const { pathname } = useLocation();
@@ -27,6 +28,7 @@ function App() {
         </Switch>
       </ConfigProvider>
       <TabBar showNav={showNav} />
+      <Custom />
     </div>
   );
 }
