@@ -3,6 +3,7 @@ import { Popup, Icon, DatePicker, Keyboard } from 'zarm';
 import './index.less';
 export default function PopupAdd() {
   const [timerVisible, setTimerVisible] = useState(false);
+  const [popVisible, setPopVisible] = useState(true);
   // 选择时间
   const toggleTimer = () => {
     setTimerVisible(true);
@@ -12,7 +13,12 @@ export default function PopupAdd() {
   };
   return (
     <div className="popup-add-wrapper">
-      <Popup visible={true} direction="bottom" onMaskClic onEsc>
+      <Popup
+        visible={popVisible}
+        direction="bottom"
+        onMaskClick={() => setPopVisible(false)}
+        onEsc={() => setPopVisible(false)}
+      >
         <div className="popup-dialog-wrapper">
           <div className="popup-dialog-header">
             <Icon type="wrong" size="sm" />
