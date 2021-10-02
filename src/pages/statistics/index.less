@@ -1,0 +1,164 @@
+.statis-wrapper {
+  width: 100%;
+  min-height: 100%;
+  background-color: #f5f5f5;
+  .statis-total {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0px;
+    margin-bottom: 10px;
+    .statis-total-time {
+      width: 96px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      background-color: #f5f5f5;
+      color: rgba(0,0,0,.9);
+      font-size: 14px;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      span:after {
+        content: '';
+        width: 1px;
+        position: absolute;
+        background-color: rgba(0,0,0,.5);
+        top: 9px;
+        right: 28px;
+        bottom: 8px;
+      }
+      i {
+        font-size: 16px;
+        color: rgba(0,0,0,.5);
+      }
+    }
+    .statis-total-title {
+      color: #007fff;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .statis-total-expense {
+      color: #007fff;
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    .statis-total-income {
+      color: rgba(0,0,0,.5);
+      font-weight: 500;
+    }
+  }
+  .statis-structure {
+    background-color: #fff;
+    padding: 0px 16px;
+    margin-bottom: 10px;
+    .statis-structure-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0px;
+      &>span:nth-child(1) {
+        font-size: 18px;
+        color: rgba(0,0,0,.9);
+      }
+      .statis-head-tab {
+        font-size: 12px;
+        span {
+          display: inline-block;
+          width: 40px;
+          height: 24px;
+          background-color: #f5f5f5;
+          text-align: center;
+          line-height: 24px;
+          margin-left: 10px;
+          border-radius: 4px;
+        }
+        span:nth-child(1).active {
+          background-color: rgba(0,127,255,.2);
+          color: #007fff;
+        }
+        span:nth-child(2).active {
+          background-color: rgba(236,190,37,.2);
+          color: #ecbe25;
+        }
+      }
+    }
+    .statis-structure-content {
+      .statis-content-item {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        .statis-item-left {
+          display: flex;
+          flex: 4;
+          align-items: center;
+          justify-content: space-between;
+          margin-right: 10px;
+          .statis-left-type {
+            display: flex;
+            align-items: center;
+            span:nth-child(1) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+              color: #fff;
+              flex-shrink: 0;
+              background-color: #ecbe25;
+            }
+            span:nth-child(2) {
+              width: 30px;
+            }
+          }
+        }
+        .statis-item-right {
+          display: flex;
+          flex: 8;
+          align-items: center;
+        }
+      }
+    }
+    .statis-structure-propo {
+      background-color: #fff;
+      padding: 12px;
+      .statis-propo-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0px;
+        &>span:nth-child(1) {
+          font-size: 18px;
+          color: rgba(0,0,0,.9);
+        }
+        .statis-head-tab {
+          font-size: 12px;
+          span {
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+            background-color: #f5f5f5;
+            text-align: center;
+            line-height: 24px;
+            margin-left: 10px;
+            border-radius: 4px;
+          }
+          span:nth-child(1).active {
+            background-color: rgba(0,127,255,.2);
+            color: #007fff;
+          }
+          span:nth-child(2).active {
+            background-color: rgba(236,190,37,.2);
+            color: #ecbe25;
+          }
+        }
+      }
+    }
+  }
+}
